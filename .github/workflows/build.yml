@@ -1,0 +1,35 @@
+name: PDF Validator Demo
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build project
+        run: mvn clean package
+
+      - name: Generate sample PDF
+        run: java -jar target/pdf-form-validator.jar --generate-sample
+
+      - name: Run validator
+        run: java -jar target/pdf-form-validator.jar samples/sample.pdf
+
+      - name: Upload annotated output
+        uses: actions/upload-artifact@v4
+        with:
+          name: annotated-output
+          path: output/
