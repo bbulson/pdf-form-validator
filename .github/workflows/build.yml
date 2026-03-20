@@ -3,7 +3,9 @@ name: PDF Validator Demo
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ "main", "add-demo-files" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   validate:
