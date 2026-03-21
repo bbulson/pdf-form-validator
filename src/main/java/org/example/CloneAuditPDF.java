@@ -20,7 +20,7 @@ public class CloneAuditPDF {
 
     public static void main(String[] args) throws IOException {
 
-        File input = new File("complete-form.pdf");
+        File input = new File("demo-files/complete-form.pdf");
         File output = new File("audited-output.pdf");
 
         PDDocument doc = Loader.loadPDF(input);
@@ -138,7 +138,7 @@ public class CloneAuditPDF {
             PDRectangle firstRect = firstWidget.getRectangle();
 
             float labelX = firstRect.getUpperRightX() + 35;
-            float labelY = firstRect.getUpperRightY() + 10;
+            float labelY = firstRect.getUpperRightY() + 2;
 
             PDPageContentStream cs =
                     new PDPageContentStream(doc, page,
