@@ -21,16 +21,9 @@ public class CloneAuditPDF {
     public static void main(String[] args) throws IOException {
 
         File input = new File("complete-form.pdf");
-       // File input = new File("demo-files/complete-form.pdf");
         File output = new File("audited-output.pdf");
 
         PDDocument doc = Loader.loadPDF(input);
-
-        PDAcroForm form0 = doc.getDocumentCatalog().getAcroForm();
-        //PDRadioButton rating = (PDRadioButton) form0.getField("rating");
-        // rating.setValue("Good");
-
-        //form0.constructAppearances();
         PDAcroForm form = doc.getDocumentCatalog().getAcroForm();
 
         if (form == null) {
@@ -62,21 +55,14 @@ public class CloneAuditPDF {
 
                 else if (field instanceof PDRadioButton) {
                     PDRadioButton radio = (PDRadioButton) field;
-
                     List<String> values = radio.getExportValues();
-
                     if (!values.isEmpty()) {
-
                         String value = values.get(0);
-
                         // Set field value
                         radio.setValue(value);
-
                         // Force widget appearance
                         for (PDAnnotationWidget widget : radio.getWidgets()) {
-
                             COSDictionary dict = widget.getCOSObject();
-
                             // selected widget
                             if (widget == radio.getWidgets().get(0)) {
                                 dict.setName("AS", value);
@@ -86,22 +72,9 @@ public class CloneAuditPDF {
                             }
                         }
                     }
-
-// Set the value to the export value of the button you want selected
+                    // Select the first button
                     String name = radio.getFullyQualifiedName();
-
-                    if ("choice".equals(name)) {
-                        radio.setValue("Yes_A");
-                        //syncRadioAppearance(radio);
-                    }
-
-                    else if ("rating".equals(name)) {
-                        radio.setValue("Good");
-                       // syncRadioAppearance(radio);
-                    }
-                    //   radio.setValue("Good");
-                    //  radio.constructAppearances();
-                  //  radio.setValue("Yes_A");
+                        radio.setValue(radio.getValue());
                 }
 
             } catch (Exception ignored) {
@@ -115,8 +88,6 @@ public class CloneAuditPDF {
                 System.out.println(field.getFullyQualifiedName() + " values = " + ((PDRadioButton) field).getExportValues());
             }
         }
-        //form.refreshAppearances();
-        // form.setNeedAppearances(true);
         /* --------------------------------------------------
            STEP 2 — Detect cloned widgets
         -------------------------------------------------- */
@@ -149,9 +120,6 @@ public class CloneAuditPDF {
             /* draw label text */
 
             cs.beginText();
-            // cs.setFont(PDType1Font.HELVETICA_BOLD, 10);
-            //new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD);
-            //cs.setFont(font, 8);
             PDType1Font font = new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD);
             cs.setFont(font, 8);
             cs.newLineAtOffset(labelX, labelY);
