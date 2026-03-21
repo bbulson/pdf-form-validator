@@ -20,7 +20,7 @@ public class CloneAuditPDF {
 
     public static void main(String[] args) throws IOException {
 
-        File input = new File("complete-form.pdf");
+        File input = new File("blank-form.pdf");
         File output = new File("audited-output.pdf");
 
         PDDocument doc = Loader.loadPDF(input);
