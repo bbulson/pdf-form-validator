@@ -1,1 +1,26 @@
+Key Features: 
+Batch Processing: Automatically detects and audits all PDF forms within the demo-files directory.
+CI/CD Integrated: Powered by GitHub Actions; every "Push" triggers a fresh audit of all forms.
+Dynamic Inputs: No hardcoded filenames. Simply drop a new .pdf into the demo folder, and the system scales to include it.
+Artifact Traceability: Generates labeled audit results (audit-filename.pdf) stored as downloadable build artifacts.
 
+🛠️ Technical Implementation
+Language/Stack: Java 21, Maven, GitHub Actions.
+Pattern: Uses Command Line Arguments (args[0]) to allow a shell loop in the YML to drive the Java logic.
+Automation: The .github/workflows/main.yml handles the environment setup, build, and execution loop.
+
+"Look at the demo-files folder:"
+Point: "Notice I moved the inputs here. This keeps the root clean and separates 'test data' from 'source code.' It’s a professional project structure."
+
+"The Power of the Loop:"
+Point: "I designed AuditPDF.java to accept file paths as arguments. This means I never have to change my Java code when I add a new form. I just update the data folder, and the GitHub Action loops through everything automatically."
+
+"The Build Pipeline (Actions):"
+Point: "By using GitHub Actions, we have a 'Source of Truth.' Anyone on the team can see the audit results in the 'Actions' tab under 'Artifacts' without even running the code locally."
+
+## How to Run the Demo
+1. **Local:** Run `mvn clean package` 
+   Then: `java -jar target/GenerateTestPDF-1.0-SNAPSHOT.jar ./demo-files/your-file.pdf`
+2. **GitHub:**
+   Simply push any `.pdf` to the `/demo-files` folder. 
+   Check the **Actions** tab to see the automated audit results.
