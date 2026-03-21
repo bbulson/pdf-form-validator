@@ -9,11 +9,11 @@ Language/Stack: Java 21, Maven, GitHub Actions.
 Pattern: Uses Command Line Arguments (args[0]) to allow a shell loop in the YML to drive the Java logic.
 Automation: The .github/workflows/main.yml handles the environment setup, build, and execution loop.
 
-"The Power of the Loop:"
-Point: "I designed AuditPDF.java to accept file paths as arguments. This means I never have to change my Java code when I add a new form. I just update the data folder, and the GitHub Action loops through everything automatically."
+The Power of the Loop:
+AuditPDF.java is designed to accept file paths as arguments. The Java code does not need to change when I add a new form, just update the data folder, and the GitHub Action loops through everything automatically.
 
-"The Build Pipeline (Actions):"
-Point: "By using GitHub Actions, we have a 'Source of Truth.' Anyone on the team can see the audit results in the 'Actions' tab under 'Artifacts' without even running the code locally."
+The Build Pipeline (Actions):
+By using GitHub Actions, we have a 'Source of Truth.' Anyone on the team can see the audit results in the 'Actions' tab under 'Artifacts' without even running the code locally.
 
 ## How to Run the Demo
 1. **Local:** Run `mvn clean package` 
