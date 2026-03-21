@@ -43,8 +43,9 @@ public class AuditPDF {
  //   public static void main(String[] args) throws IOException {
 
       //  File input = new File("blank-form.pdf");
-        File output = new File("audited-output.pdf");
-
+       // File output = new File("audited-output.pdf");
+        String outputName = "demo-files/audit-" + input.getName();
+        File output = new File(outputName);
         PDDocument doc = Loader.loadPDF(input);
         PDAcroForm form = doc.getDocumentCatalog().getAcroForm();
 
