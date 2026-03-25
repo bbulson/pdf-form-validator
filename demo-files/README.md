@@ -12,6 +12,8 @@ Add any .pdf form to this folder
 
 Adding or updating files in this directory on GitHub automatically triggers the pipeline to process all files.
 
+View results in the Actions tab → Artifacts
+
 💡 Notes
 
 No configuration is required when adding new files
