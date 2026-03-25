@@ -1,5 +1,4 @@
-PDF Form Validator
-
+**PDF Form Validator**<br>
 A Java-based headless PDF validation engine designed for CI/CD environments.<br>
 This tool automates PDF form population and generates visual audit reports that clearly highlight field mappings, enabling fast and accurate validation of form data.<br>
 
@@ -11,8 +10,7 @@ Visual validation through annotated output files<br>
 Scalable batch processing of multiple PDFs without code changes<br>
 CI/CD integration using GitHub Actions for automated validation workflows
 
-🧭 How It Works
-
+🧭 How It Works<br>
 PDF files are placed in the /demo-files directory<br>
 The application processes each file and injects data into form fields<br>
 An audited PDF is generated with visual indicators for field mappings<br>
@@ -31,8 +29,7 @@ Download validation results from the workflow artifacts<br>
 
 For local testing, see /demo-files/README.md.
 
-💡 Key Value
-
+💡 Key Value<br>
 Traditional PDF validation relies on logs and assertions, which can miss visual issues.<br>
 This project introduces visual QA validation, making it easy to:
 
@@ -40,8 +37,7 @@ Detect incorrect mappings<br>
 Identify missing or misaligned fields<br>
 Verify output quickly without manual inspection
 
-🛠 Tech Stack
-
+🛠 Tech Stack<br>
 Language: Java 21 (LTS)<br>
 Libraries: Apache PDFBox, Maven<br>
 CI/CD: GitHub Actions (automated validation pipelines)<br>
