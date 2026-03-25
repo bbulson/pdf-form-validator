@@ -11,6 +11,7 @@ Commit and push changes to the repository<br>
 The CI pipeline (via GitHub Actions) will automatically:<br>
  - Process all PDFs in this folder<br>
  - Generate validated and annotated outputs<br>
+ 
 View results:<br>
  - Navigate to the Actions tab<br>
  - Open the latest workflow run<br>
