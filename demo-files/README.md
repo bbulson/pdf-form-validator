@@ -17,6 +17,6 @@ View results:<br>
  - Download artifacts from the “audit-results-package”
 
 💡 Notes
-No configuration is required when adding new files
-All PDFs in this directory are processed automatically
+No configuration is required when adding new files<br>
+All PDFs in this directory are processed automatically<br>
 Output files include visual audit annotations for easy validation review
