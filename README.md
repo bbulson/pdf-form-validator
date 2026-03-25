@@ -28,13 +28,17 @@ AuditPDF.java → Main execution class
 ▶️ Getting Started
 
 Run Locally
+
 mvn clean package
+
 java -jar target/GenerateTestPDF-1.0-SNAPSHOT.jar ./demo-files/your-file.pdf
 
 Run via GitHub Actions
 
 Add or update a PDF in /demo-files
+
 Push changes
+
 View results in the Actions tab → Artifacts
 
 💡 Key Value
