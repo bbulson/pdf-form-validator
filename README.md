@@ -10,16 +10,19 @@ Automated PDF form population using Apache PDFBox<br>
 Visual validation through annotated output files<br>
 Scalable batch processing of multiple PDFs without code changes<br>
 CI/CD integration using GitHub Actions for automated validation workflows
+
 🧭 How It Works
 PDF files are placed in the /demo-files directory<br>
 The application processes each file and injects data into form fields<br>
 An audited PDF is generated with visual indicators for field mappings<br>
 Results can be reviewed locally or downloaded from CI pipeline artifacts
+
 📁 Project Structure
 /src → Core Java logic for PDF processing and validation<br>
 /demo-files → Sample input files for testing<br>
 .github/workflows → CI pipeline for automated validation<br>
 AuditPDF.java → Main execution entry point
+
 ▶️ Getting Started
 Add or update PDFs in the /demo-files directory<br>
 Push changes to trigger the CI pipeline automatically<br>
