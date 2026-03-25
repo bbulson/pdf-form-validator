@@ -21,8 +21,11 @@ Results can be reviewed locally or downloaded from GitHub Actions
 📁 Project Structure
 
 /src → Core Java logic for PDF processing and validation
+
 /demo-files → Sample input files for testing
+
 .github/workflows → CI pipeline that runs validation automatically
+
 AuditPDF.java → Main execution class
 
 ▶️ Getting Started
