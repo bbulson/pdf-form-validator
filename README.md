@@ -31,8 +31,7 @@ For local testing, see /demo-files/README.md.
 
 💡 Key Value<br>
 Traditional PDF validation relies on logs and assertions, which can miss visual issues.<br>
-This project introduces visual QA validation, making it easy to:
-
+This project introduces visual QA validation, making it easy to:<br>
 Detect incorrect mappings<br>
 Identify missing or misaligned fields<br>
 Verify output quickly without manual inspection
