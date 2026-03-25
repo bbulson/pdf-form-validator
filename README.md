@@ -39,7 +39,9 @@ This project introduces visual QA validation, making it easy to:
 Detect incorrect mappings<br>
 Identify missing or misaligned fields<br>
 Verify output quickly without manual inspection
+
 🛠 Tech Stack
+
 Language: Java 21 (LTS)<br>
 Libraries: Apache PDFBox, Maven<br>
 CI/CD: GitHub Actions (automated validation pipelines)<br>
