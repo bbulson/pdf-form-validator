@@ -6,32 +6,23 @@ This project is designed to simulate real-world QA validation by not only popula
 
 🎯 Engineering Goals
 
-Automated PDF form population using Apache PDFBox
-
-Visual validation through annotated output files
-
-Scalable processing of multiple forms with no code changes
-
+Automated PDF form population using Apache PDFBox<br>
+Visual validation through annotated output files<br>
+Scalable processing of multiple forms with no code changes<br>
 CI/CD integration using GitHub Actions (YAML workflow) to automatically process and validate all PDF files
 
 🧭 How It Works
 
-PDF files are placed in the /demo-files directory
-
-The application processes each file and injects data into all form fields
-
-A new audited PDF is generated with visual indicators showing field mappings
-
+PDF files are placed in the /demo-files directory<br>
+The application processes each file and injects data into all form fields<br>
+A new audited PDF is generated with visual indicators showing field mappings<br>
 Results can be reviewed locally or downloaded from GitHub Actions
 
 📁 Project Structure
 
-/src → Core Java logic for PDF processing and validation
-
-/demo-files → Sample input files for testing
-
-.github/workflows → CI pipeline that runs validation automatically
-
+/src → Core Java logic for PDF processing and validation<br>
+/demo-files → Sample input files for testing<br>
+.github/workflows → CI pipeline that runs validation automatically<br>
 AuditPDF.java → Main execution class
 
 ▶️ Getting Started
