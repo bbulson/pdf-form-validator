@@ -36,14 +36,6 @@ public class AuditPDF {
         }
 
         System.out.println("Processing file: " + input.getName());
-
-        // --- Your existing PDF logic goes here ---
-        // Use 'input' instead of a hardcoded "complete-form.pdf"
-   // }
- //   public static void main(String[] args) throws IOException {
-
-      //  File input = new File("blank-form.pdf");
-       // File output = new File("audited-output.pdf");
         String outputName = "demo-files/audit-" + input.getName();
         File output = new File(outputName);
         PDDocument doc = Loader.loadPDF(input);
@@ -61,7 +53,6 @@ public class AuditPDF {
            STEP 1 — Insert test values
         -------------------------------------------------- */
         int index = 0;
-        // form.setNeedAppearances(false);
         for (PDField field : form.getFieldTree()) {
             index+=1;
             form.setNeedAppearances(true);
@@ -104,7 +95,7 @@ public class AuditPDF {
                 System.out.println(ignored);
             }
             if (field instanceof PDCheckBox) {
-                System.out.println(field.getFullyQualifiedName() + " ON value = " + ((PDCheckBox) field).getOnValue());
+                System.out.println(field.getFullyQualifiedName() + " ON value = " + ((PDCheckBox) field).getValue());
             }
 
             if (field instanceof PDRadioButton) {
@@ -112,7 +103,7 @@ public class AuditPDF {
             }
         }
         /* --------------------------------------------------
-           STEP 2 — Detect cloned widgets
+           STEP 2 — Detect duplicate widgets
         -------------------------------------------------- */
 
         for (PDField field : form.getFieldTree()) {
@@ -146,11 +137,11 @@ public class AuditPDF {
             PDType1Font font = new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD);
             cs.setFont(font, 8);
             cs.newLineAtOffset(labelX, labelY);
-            cs.showText("Cloned Field: " + fieldName);
+            cs.showText("Duplicate Field: " + fieldName);
             cs.endText();
             PDAnnotationText comment = new PDAnnotationText();
-            comment.setContents("Cloned Field: " + fieldName);
-            comment.setTitlePopup("Clone Audit");
+            comment.setContents("Duplicate Field: " + fieldName);
+            comment.setTitlePopup("Duplicate Audit");
 
             PDRectangle commentRect = new PDRectangle();
             commentRect.setLowerLeftX(labelX-20);
@@ -197,7 +188,7 @@ public class AuditPDF {
         doc.save(output);
         doc.close();
 
-        System.out.println("Clone audit complete → " + output.getAbsolutePath());
+        System.out.println("Audit PDF complete → " + output.getAbsolutePath());
     }
 
 }
