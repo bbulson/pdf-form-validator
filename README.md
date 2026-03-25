@@ -33,7 +33,7 @@ Add or update PDFs in the demo-files/ directory on GitHub to automatically trigg
 This project focuses on visual validation, which is often missing in traditional automation. Instead of relying only on logs or assertions, it provides a clear, human-readable way to confirm that every field is mapped correctly.
 
 🛠 Tech Stack
-* **Language:** Java 17 (OpenSDK)
+* **Language:** Java 21 (LTS)
 * **Libraries:** Apache PDFBox, Maven
 * **CI/CD:** GitHub Actions (YAML-based pipelines)
 * **Architecture:** Headless / Automation-as-Code
