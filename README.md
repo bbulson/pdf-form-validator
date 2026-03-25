@@ -1,6 +1,6 @@
 PDF Form Validator
 
-A Java-based automation tool that validates PDF form data by injecting values into fields and generating visual audit reports.
+A Java-based headless automation tool that validates PDF form data by injecting values into fields and generating visual audit reports.
 
 This project is designed to simulate real-world QA validation by not only populating PDF forms, but also visually confirming accuracy. Each processed file produces an annotated output that highlights fields and points directly to mapped values, making it easy to verify correctness at a glance.
 
