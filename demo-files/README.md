@@ -2,22 +2,17 @@ This folder contains sample PDF forms used to demonstrate and test the validator
 
 📌 Purpose
 
-Keeps test data separate from source code
-
+Keeps test data separate from source code<br>
 Allows easy testing without modifying application logic
 
 ▶️ How to Use
 
-Add any .pdf form to this folder
-
-Adding or updating files in this directory on GitHub automatically triggers the pipeline to process all files.
-
+Add any .pdf form to this folder<br>
+Adding or updating files in this directory on GitHub automatically triggers the pipeline to process all files.<br>
 View results in the Actions tab → [latest workflow run] → Artifacts.
 
 💡 Notes
 
-No configuration is required when adding new files
-
-All PDFs placed here will be included in the next execution
-
+No configuration is required when adding new files<br>
+All PDFs placed here will be included in the next execution<br>
 Output files will be generated with audit annotations for review
