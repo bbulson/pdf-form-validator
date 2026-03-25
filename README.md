@@ -7,8 +7,11 @@ This project is designed to simulate real-world QA validation by not only popula
 🚀 What This Project Demonstrates
 
 Automated PDF form population using Apache PDFBox
+
 Visual validation through annotated output files
+
 Scalable processing of multiple forms with no code changes
+
 CI/CD integration using GitHub Actions for repeatable test execution
 
 🧭 How It Works
