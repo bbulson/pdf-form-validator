@@ -1,23 +1,42 @@
-Key Features: 
-Batch Processing: Automatically detects and audits all PDF forms within the demo-files directory.
-CI/CD Integrated: Powered by GitHub Actions; every "Push" triggers a fresh audit of all forms.
-Dynamic Inputs: No hardcoded filenames. Simply drop a new .pdf into the demo folder, and the system scales to include it.
-Artifact Traceability: Generates labeled audit results (audit-filename.pdf) stored as downloadable build artifacts.
+Core Processing Logic
 
-🛠️ Technical Implementation
-Language/Stack: Java 21, Maven, GitHub Actions.
-Pattern: Uses Command Line Arguments (args[0]) to allow a shell loop in the YML to drive the Java logic.
-Automation: The .github/workflows/main.yml handles the environment setup, build, and execution loop.
+This module contains the main automation engine responsible for reading, populating, and validating PDF forms.
 
-The Power of the Loop:
-AuditPDF.java is designed to accept file paths as arguments. The Java code does not need to change to process a new form, just update the data folder, and the GitHub Action loops through everything automatically.
+⚙️ Key Features
+Batch Processing
+Automatically detects and processes all PDF files passed into the system
+Dynamic Input Handling
+No hardcoded filenames. The application accepts file paths as arguments, allowing flexible execution
+Automated Reporting
+Generates annotated PDFs (audit-<filename>.pdf) with visual indicators for validation
+CI/CD Integration
+Designed to run seamlessly within GitHub Actions for automated validation on every push
 
-The Build Pipeline (Actions):
-By using GitHub Actions, we have a 'Source of Truth.' Anyone on the team can see the audit results in the 'Actions' tab under 'Artifacts' without even running the code locally.
+🛠️ Technical Design
+Language: Java 21
+Build Tool: Maven
+Automation: GitHub Actions
 
-## How to Run the Demo
-1. **Local:** Run `mvn clean package` 
-   Then: `java -jar target/GenerateTestPDF-1.0-SNAPSHOT.jar ./demo-files/your-file.pdf`
-2. **GitHub:**
-   Simply push any `.pdf` to the `/demo-files` folder. 
-   Check the **Actions** tab to see the automated audit results.
+The application is built around a simple but scalable pattern:
+
+The program accepts a file path as input, processes it, and outputs an audited version.
+
+This allows external systems (like CI pipelines) to control execution without modifying the code.
+
+🔁 How the Automation Works
+
+The GitHub Actions workflow:
+
+Sets up the environment
+Builds the project
+Loops through all PDF files in /demo-files
+Runs the validator for each file
+
+Because of this design:
+
+Adding a new file requires no code changes
+The system automatically scales with new inputs
+📊 Why This Matters
+
+This approach creates a single source of truth for validation results.
+Anyone can view outputs directly from the CI pipeline without running the project locally.
