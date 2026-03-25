@@ -16,7 +16,7 @@ View results:<br>
  - Open the latest workflow run<br>
  - Download artifacts from the “audit-results-package”
 
-💡 Notes
+💡 Notes<br>
 No configuration is required when adding new files<br>
 All PDFs in this directory are processed automatically<br>
 Output files include visual audit annotations for easy validation review
