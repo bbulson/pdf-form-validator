@@ -10,7 +10,7 @@ No hardcoded filenames. The application accepts file paths as arguments, allowin
 Automated Reporting
 Generates annotated PDFs (audit-<filename>.pdf) with visual indicators for validation
 CI/CD Integration
-Designed to run seamlessly within GitHub Actions for automated validation on every push
+Designed to run seamlessly within GitHub Actions for automated validation on every push. A YAML workflow orchestrates the build and execution by looping through each PDF file and passing it as an argument into the Java application.
 
 🛠️ Technical Design
 Language: Java 21
