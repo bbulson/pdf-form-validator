@@ -1,18 +1,22 @@
-This folder contains sample PDF forms used to demonstrate and test the validator.
+Sample PDF forms used for automated validation testing and CI pipeline execution.
 
-📌 Purpose
+📌 Purpose<br>
+Separates test data from application source code<br>
+Enables quick validation testing without modifying logic<br>
+Serves as input for both local runs and CI pipeline execution
 
-Keeps test data separate from source code<br>
-Allows easy testing without modifying application logic
-
-▶️ How to Use
-
-Add any .pdf form to this folder<br>
-Adding or updating files in this directory on GitHub automatically triggers the pipeline to process all files.<br>
-View results in the Actions tab → [latest workflow run] → Artifacts.
+▶️ How to Use<br>
+Add any .pdf form to this directory<br>
+Commit and push changes to the repository<br>
+The CI pipeline (via GitHub Actions) will automatically:<br>
+ - Process all PDFs in this folder<br>
+ - Generate validated and annotated outputs<br>
+View results:<br>
+ - Navigate to the Actions tab<br>
+ - Open the latest workflow run<br>
+ - Download artifacts from the “audit-results-package”
 
 💡 Notes
-
-No configuration is required when adding new files<br>
-All PDFs placed here will be included in the next execution<br>
-Output files will be generated with audit annotations for review
+No configuration is required when adding new files
+All PDFs in this directory are processed automatically
+Output files include visual audit annotations for easy validation review
