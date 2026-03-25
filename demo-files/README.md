@@ -11,8 +11,7 @@ Acts as the input source for both local runs and CI automation
 ▶️ How to Use
 
 Add any .pdf form to this folder
-
-Run the application locally or push changes to trigger GitHub Actions
+Push changes to the main branch to automatically trigger the GitHub Actions validation pipeline.
 
 The system will automatically process all files in this directory
 
