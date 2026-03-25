@@ -12,7 +12,7 @@ Visual validation through annotated output files
 
 Scalable processing of multiple forms with no code changes
 
-CI/CD integration using GitHub Actions for repeatable test execution
+CI/CD integration using GitHub Actions (YAML workflow) to automatically process and validate all PDF files
 
 🧭 How It Works
 
