@@ -3,7 +3,6 @@ Sample PDF forms used for automated validation testing and CI pipeline execution
 📌 Purpose<br>
 Separates test data from application source code<br>
 Enables quick validation testing without modifying logic<br>
-Serves as input for both local runs and CI pipeline execution
 
 ▶️ How to Use<br>
 Add any .pdf form to this directory<br>
