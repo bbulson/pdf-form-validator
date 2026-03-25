@@ -17,8 +17,11 @@ CI/CD integration using GitHub Actions (YAML workflow) to automatically process 
 🧭 How It Works
 
 PDF files are placed in the /demo-files directory
+
 The application processes each file and injects data into all form fields
+
 A new audited PDF is generated with visual indicators showing field mappings
+
 Results can be reviewed locally or downloaded from GitHub Actions
 
 📁 Project Structure
