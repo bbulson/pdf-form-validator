@@ -5,6 +5,7 @@ This folder contains sample PDF forms used to demonstrate and test the validator
 Keeps test data separate from source code
 
 Allows easy testing without modifying application logic
+
 Acts as the input source for both local runs and CI automation
 
 ▶️ How to Use
