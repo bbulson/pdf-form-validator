@@ -5,6 +5,7 @@ A Java-based headless automation tool designed for CI/CD environments, focused o
 This project is designed to simulate real-world QA validation by not only populating PDF forms, but also visually confirming accuracy. Each processed file produces an annotated output that highlights fields and points directly to mapped values, making it easy to verify correctness at a glance.
 
 🎯 Engineering Goals
+
 Automated PDF form population using Apache PDFBox
 
 Visual validation through annotated output files
