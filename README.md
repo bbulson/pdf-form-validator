@@ -1,5 +1,5 @@
 **PDF Form Validator**<br>
-A Java-based headless PDF validation engine designed for CI/CD environments.<br>
+A Java-based headless PDF validation engine designed for CI/CD environments. The framework separates test data from core logic and leverages Maven to optimize the build lifecycle, showcasing a scalable and maintainable approach to automated software testing.
 This tool automates PDF form population and generates visual audit reports that clearly highlight field mappings, enabling fast and accurate validation of form data.<br>
 
 Instead of relying solely on logs or assertions, each processed file produces an annotated PDF output, allowing reviewers to instantly verify correctness.
