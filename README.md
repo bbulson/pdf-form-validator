@@ -18,7 +18,7 @@ An audited PDF is generated with visual indicators for field mappings<br>
 Results can be reviewed locally or downloaded from CI pipeline artifacts
 
 ✅ Acceptance Criteria (Definition of Done)<br>
-For a validation run to be considered Successful, the following must be true:<br>
+For a validation run to be considered successful, the following must be true:<br>
 Input Handling: The engine must identify all fillable fields within a PDF located in the /demo-files directory.<br>
 Data Mapping: Injected data must persist in the output file without corrupting the original PDF structure.<br>
 Visual Feedback: The output Audit PDF must contain annotations for every field targeted by the validation logic.<br>
