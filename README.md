@@ -23,7 +23,7 @@ Input Handling: The engine must identify all fillable fields within a PDF locate
 Data Mapping: Injected data must persist in the output file without corrupting the original PDF structure.<br>
 Visual Feedback: The output Audit PDF must contain annotations for every field targeted by the validation logic.<br>
 Pipeline Integrity: The GitHub Action must fail if a PDF is unreadable or if the Maven build encounters a dependency error.<br>
-Artifact Generation: A downloadable ZIP file containing the annotated results must be available in the GitHub Summary tab within 2 minutes of the push.
+Artifact Generation: A verified audit-results-package (ZIP) must be produced and available for download within 60 seconds of the CI/CD trigger.
 
 📁 Project Structure<br>
 /src → Core Java logic for PDF processing and validation<br>
