@@ -17,6 +17,14 @@ The application processes each file and injects data into form fields<br>
 An audited PDF is generated with visual indicators for field mappings<br>
 Results can be reviewed locally or downloaded from CI pipeline artifacts
 
+✅ Acceptance Criteria (Definition of Done)<br>
+For a validation run to be considered "Successful," the following must be true:<br>
+Input Handling: The engine must identify all fillable fields within a PDF located in the /demo-files directory.<br>
+Data Mapping: Injected data must persist in the output file without corrupting the original PDF structure.<br>
+Visual Feedback: The output "Audit PDF" must contain red/green annotations for every field targeted by the validation logic.<br>
+Pipeline Integrity: The GitHub Action must fail if a PDF is unreadable or if the Maven build encounters a dependency error.<br>
+Artifact Generation: A downloadable ZIP file containing the annotated results must be available in the GitHub "Summary" tab within 2 minutes of the push.
+
 📁 Project Structure<br>
 /src → Core Java logic for PDF processing and validation<br>
 /demo-files → Sample input files for testing<br>
