@@ -49,4 +49,4 @@ Verify output quickly without manual inspection
 Language: Java 21 (LTS)<br>
 Libraries: Apache PDFBox, Maven<br>
 CI/CD: GitHub Actions (automated validation pipelines)<br>
-Architecture: Headless validation engine integrated into CI/CD pipelines
+Architecture: Headless validation engine integrated into CI/CD pipelines 
